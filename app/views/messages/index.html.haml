@@ -1,0 +1,57 @@
+.header
+  グループが作成されました
+  .wrapper
+    .chat-side
+      .side-header
+        .side-header__box
+          %p 
+            ユーザーネーム
+            %ul.side-header__box__list
+              %li.side-header__box__list__username 
+              %li.side-header__box__list__menu
+                = fa_icon 'edit'
+                = fa_icon 'cog'
+      .groups
+        = render "messages"
+        = render "messages"
+        = render "messages"
+        = render "messages"
+        = render "messages"
+        = render "messages"
+        = render "messages"
+        = render "messages"
+        = render "messages"
+        = render "messages"
+    .chat-main
+      .main-header
+        .main-header__left-box
+          .main-header__left-box__group
+            グループ名
+          .main-header__left-box__member
+            member:
+        .main-header__edit-btn 
+          EDIT  
+        
+      .chat-main__messages
+        .chat-box
+          = render "chat-box"
+          = render "chat-box"
+          = render "chat-box"
+          = render "chat-box"
+          = render "chat-box"
+          = render "chat-box"
+          = render "chat-box"
+          = render "chat-box"
+      
+      .chat-form
+        %form
+          %input.chat-form__message{placeholder: 'type a message'}
+          .chat-form__input-box
+            %label.chat-form__input-box__image
+              = fa_icon 'picture-o'
+          %input.chat-form__submit{type: 'submit', value: 'Send'}
+            
+              
+              
+              
+      
