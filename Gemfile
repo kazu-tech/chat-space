@@ -54,3 +54,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem "font-awesome-rails"
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'rspec-rails', '~> 3.5'
+gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'jquery-rails'

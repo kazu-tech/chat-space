@@ -1,0 +1,102 @@
+
+.chat-main {
+  width: calc(100vw - 300px);
+  float:left;
+  box-sizing: border-box;
+  height: 100%;
+    .main-header {
+      height: 100px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      &__left-box {
+        margin-top: 35px; 
+      }
+        &__left-box__group {
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 15px;
+        }
+        &__left-box__member {
+          display: flex;
+          font-size: 12px;
+          color: #999999;
+        }
+      &__edit-btn {
+        color: #38aef0;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 30px;
+        border: solid 1px #38aef0;
+        position: absolute;
+        right: 40px;
+        list-style: none;
+      }
+    }
+
+    .chat-main__messages {
+      height: calc(91vh - 190px);
+      padding: 46px 40px;
+      background-color: #fafafa;
+      overflow: scroll;
+        &__new-messages {
+          padding-bottom: 10px;
+          text-align: left;
+          
+          &__member {
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+          }
+          &__date {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+        &__message {
+          color:#434a53;
+          font-size: 14px;
+          margin-bottom: 10px;
+          text-align: left;
+          padding-bottom: 40px;
+        }
+    }
+    .chat-form {
+      background-color: #dddddd;
+      box-sizing: border-box;
+      height: 90px;
+      padding: 20px 50px 20px 40px;
+      &__message {
+        border: none;
+        float: left;
+        height: 50px;
+        width: calc(100% - 150px);
+      }      
+      &__input-box {
+        background-color: white;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+        }  
+      }
+      &__submit {
+        background-color: #38aef0;
+        border: none;
+        float: right;
+        color: white;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
+    }
+}

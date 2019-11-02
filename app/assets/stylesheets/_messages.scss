@@ -1,57 +1,54 @@
-.header {
-  background-color: #38AEF0;
-  text-align: center;
-  color: white;
-}
-
 .wrapper {
   margin: 0;
   padding: 0;
   display: block;
   color: #000;
   box-sizing: border-box;
-    .chat-side {
-      width: 300px;
-      color: white;
-      float: left;
-      box-sizing: border-box;
-      .side-header {
-        height: 100px;
-        background-color: #253141;
-        align-items: center;
-        display: flex;
-        padding: 0 20px;
-          &__box {
-            justify-content: space-between;
+  .chat-side {
+    width: 300px;
+    color: white;
+    float: left;
+    box-sizing: border-box;
+    .side-header {
+      height: 100px;
+      background-color: #253141;
+      align-items: center;
+      display: flex;
+      padding: 0 20px;
+        &__box {
+          justify-content: space-between;
+          display: flex;
+          width: 100%;
+          font-weight: bold;
+        }
+          .side-header__box__user-name {
             display: flex;
-            width: 100%;
-            font-weight: bold;
-          }
-            .side-header__box__list {
-              display: flex;
-              margin-left: auto
+            margin-left: auto;
+            &__new-group {
             }
-      } 
-      
-      .groups {
-        height: calc(100vh - 100px);
-        background-color: #2f3e51;
-        padding: 20px 20px 0;
-        overflow: scroll;
-        .groups-chat {
-          text-align: left;
-          &__name {
-            font-size: 15px;
-            margin-bottom: 5px;
           }
-          &__message {
-            font-size: 11px;
-            margin-bottom: 40px;
-          }
+    } 
+    
+    .groups {
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+      .group a{
+        color: inherit;
+        text-align: left;
+        text-decoration: none;
+        &__name {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        &__message {
+          font-size: 11px;
+          margin-bottom: 40px;
         }
       }
     }
-
+  }
   .chat-main {
     width: calc(100vw - 300px);
     float:left;
@@ -84,6 +81,7 @@
           border: solid 1px #38aef0;
           position: absolute;
           right: 40px;
+          list-style: none;
         }
       }
 
@@ -95,28 +93,30 @@
           &__new-messages {
             padding-bottom: 10px;
             text-align: left;
-            
-            &__member {
-              color: #434a54;
-              font-size: 16px;
-              font-weight: bold;
-              display: flex;
+            .message{
+              margin-bottom: 40px;
+              .upper-message__user-name {
+                color: #434a54;
+                font-size: 16px;
+                font-weight: bold;
+                display: flex;
+              }
+              .upper-message__date {
+                color: #999999;
+                font-size: 12px;
+                margin-left: 10px;
+              }
             }
-            &__date {
-              color: #999999;
-              font-size: 12px;
-              margin-left: 10px;
+            .lower-message {
+              color:#434a53;
+              font-size: 14px;
+              margin-bottom: 10px;
+              text-align: left;
             }
+        }
           }
-          &__message {
-            color:#434a53;
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-align: left;
-            padding-bottom: 40px;
-          }
-      }
-      .chat-form {
+          
+      .form {
         background-color: #dddddd;
         box-sizing: border-box;
         height: 90px;
@@ -135,10 +135,10 @@
           &__image {
             font-size: 20px;
             line-height: 50px;
-            font-family: inherit;
-            font-size: inherit;
-            font-weight: inherit;
           }  
+          .hidden {
+            display: none;
+          }
         }
         &__submit {
           background-color: #38aef0;
@@ -148,6 +148,7 @@
           height: 50px;
           margin-left: 15px;
           padding: 0 30px;
+          float: right;
         }
       }
   }

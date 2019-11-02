@@ -1,0 +1,10 @@
+.side-bar
+  .header      
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。

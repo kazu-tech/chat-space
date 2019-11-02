@@ -1,57 +1,33 @@
-.header
-  グループが作成されました
+.flash-box
   .wrapper
     .chat-side
-      .side-header
-        .side-header__box
-          %p 
-            ユーザーネーム
-            %ul.side-header__box__list
-              %li.side-header__box__list__username 
-              %li.side-header__box__list__menu
-                = fa_icon 'edit'
-                = fa_icon 'cog'
-      .groups
-        = render "messages"
-        = render "messages"
-        = render "messages"
-        = render "messages"
-        = render "messages"
-        = render "messages"
-        = render "messages"
-        = render "messages"
-        = render "messages"
-        = render "messages"
+      =render 'shared/side_bar'
+      
     .chat-main
       .main-header
         .main-header__left-box
           .main-header__left-box__group
-            グループ名
+            =@group.name
           .main-header__left-box__member
-            member:
-        .main-header__edit-btn 
-          EDIT  
+            - member = "Member:"
+            .main-header__left-box__member__user
+              - @group.users.each do |user|
+                - member = member+ "#{user.name}"
+              = member 
+        %li.main-header__edit-btn 
+          = link_to "Edit", edit_group_path(@group)
+            
         
       .chat-main__messages
-        .chat-box
-          = render "chat-box"
-          = render "chat-box"
-          = render "chat-box"
-          = render "chat-box"
-          = render "chat-box"
-          = render "chat-box"
-          = render "chat-box"
-          = render "chat-box"
+        .chat-main__messages__new-messages
+          = render @messages
       
-      .chat-form
-        %form
-          %input.chat-form__message{placeholder: 'type a message'}
-          .chat-form__input-box
-            %label.chat-form__input-box__image
-              = fa_icon 'picture-o'
-          %input.chat-form__submit{type: 'submit', value: 'Send'}
-            
-              
-              
-              
-      
+      .form
+        .form__message
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            .form__input-box
+              = f.label :image, class: 'form__mask__image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'
