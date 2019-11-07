@@ -1,13 +1,3 @@
-Skip to content
- renesis13B / chat-space
-Code Issues 0 Pull requests 3 Projects 0 Wiki Security Pulse Community
-chat-space/app/assets/javascripts/user.js / 
- y-wakugami fix
-f6244ef on 1 May
-71 lines (70 sloc)  2.71 KB
-  
- You're using jump to definition to discover and navigate code.  Beta
-Learn more or give us feedback
 $(function () {
   var search_list = $('#user-search-result');
   // ユーザーリスト作成HTML
@@ -78,15 +68,3 @@ $(function () {
     $(this).parent().remove();
   });
 });
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
