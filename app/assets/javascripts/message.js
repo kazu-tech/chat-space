@@ -1,4 +1,4 @@
-$(function(){
+$(document).on("turbolinks:load",function(){
   function buildHTML(message){ //_message.html.hamlからクラスを引っ張ってくる
     var img = message.image.url? `<img src=${message.image.url}>`:""
     var html = 
@@ -80,4 +80,4 @@ $(function(){
   };
   setInterval(reloadMessages, 5000);
 
-});
+})
