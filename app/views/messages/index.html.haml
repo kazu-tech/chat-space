@@ -9,10 +9,10 @@
           .main-header__left-box__group
             =@group.name
           .main-header__left-box__member
-            - member = "Member:"
+            - member = "Member : "
             .main-header__left-box__member__user
               - @group.users.each do |user|
-                - member = member+ "#{user.name}"
+                - member = member+ "#{user.name}　"
               = member 
         %li.main-header__edit-btn 
           = link_to "Edit", edit_group_path(@group)

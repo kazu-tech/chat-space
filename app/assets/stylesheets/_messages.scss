@@ -93,11 +93,14 @@
             text-align: left;
             .message{
               margin-bottom: 40px;
-              .upper-message__user-name {
-                color: #434a54;
-                font-size: 16px;
-                font-weight: bold;
+              .upper-message{
                 display: flex;
+                .upper-message__user-name {
+                  color: #434a54;
+                  font-size: 16px;
+                  font-weight: bold;
+                  display: flex;
+                }
               }
               .upper-message__date {
                 color: #999999;
